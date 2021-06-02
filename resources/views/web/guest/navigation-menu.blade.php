@@ -1,6 +1,3 @@
-{{-- bg-gradient-to-r from-green-th to-blue-th --}}
-{{-- {{ url('img/logo.png') }} --}}
-
 <div class="relative bg-gradient-to-r from-green-th to-blue-th" x-data="{ open: false }">
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
