@@ -1,4 +1,4 @@
-<section id="hours" class="mt-32 pb-32">
+<section id="hours" class="py-32">
     <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
         <div class="lg:grid lg:grid-cols-3 lg:gap-24 lg:items-center flex-col flex">
 

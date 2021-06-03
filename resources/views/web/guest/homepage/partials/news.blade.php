@@ -14,7 +14,7 @@
                 </p>
             </div>
             <div class="p-6 bg-blue-th rounded-bl-2xl rounded-br-2xl md:px-8">
-                <a href="#" class="text-base font-medium text-white hover:text-black-th">Nos horaires<span aria-hidden="true"> &rarr;</span></a>
+                <a href="{{ route('welcome') }}/#hours" class="text-base font-medium text-white hover:text-black-th">Nos horaires<span aria-hidden="true"> &rarr;</span></a>
             </div>
         </div>
 

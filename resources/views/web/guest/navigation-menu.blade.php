@@ -1,4 +1,4 @@
-<div class="relative bg-gradient-to-r from-green-th to-blue-th" x-data="{ open: false }">
+<div class="bg-gradient-to-r from-green-th to-blue-th fixed z-50 right-0 top-0 w-full shadow-2xl" x-data="{ open: false }">
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="flex justify-between items-center py-2 md:justify-start md:space-x-10">
@@ -66,7 +66,7 @@
                             </span>
                         </a>
 
-                        <a href="{{ route('welcome') }}/#courses" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                        <a @click="open = !open" href="{{ route('welcome') }}/#courses" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
                             <svg class="flex-shrink-0 h-6 w-6 text-blue-th" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
                             </svg>
@@ -75,7 +75,7 @@
                             </span>
                         </a>
 
-                        <a href="{{ route('welcome') }}/#prices" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                        <a @click="open = !open" href="{{ route('welcome') }}/#prices" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
                             <svg class="flex-shrink-0 h-6 w-6 text-blue-th" mlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
                             </svg>
@@ -84,7 +84,7 @@
                             </span>
                         </a>
 
-                        <a href="{{ route('welcome') }}/#hours" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                        <a @click="open = !open" href="{{ route('welcome') }}/#hours" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
                             <svg class="flex-shrink-0 h-6 w-6 text-blue-th" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
@@ -93,7 +93,7 @@
                             </span>
                         </a>
 
-                        <a href="{{ route('welcome') }}/#contact" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                        <a @click="open = !open" href="{{ route('welcome') }}/#contact" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
                             <svg class="flex-shrink-0 h-6 w-6 text-blue-th" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                             </svg>

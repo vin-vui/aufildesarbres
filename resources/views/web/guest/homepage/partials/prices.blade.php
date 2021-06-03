@@ -1,4 +1,4 @@
-<section id="prices" class="mt-16">
+<section id="prices" class="pt-32">
     <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
         <div class="lg:grid lg:grid-cols-3 lg:gap-24 lg:items-center">
 

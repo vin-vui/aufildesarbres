@@ -12,7 +12,7 @@
     </div>
 
     <div class="mt-10 pb-12 bg-gray-50 sm:pb-16">
-        <div class="relative z-50">
+        <div class="relative z-40">
             <div class="absolute inset-0 h-1/2"></div>
             <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-4xl mx-auto">

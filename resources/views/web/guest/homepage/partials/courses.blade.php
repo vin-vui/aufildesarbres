@@ -2,7 +2,7 @@
     <path fill="rgba(249, 250, 251, 1)" fill-opacity="1" d="M0,256L240,128L480,256L720,96L960,160L1200,96L1440,224L1440,0L1200,0L960,0L720,0L480,0L240,0L0,0Z"></path>
 </svg>
 
-<section id="courses" class="relative bg-gradient-to-r from-green-th to-blue-th">
+<section id="courses" class="relative bg-gradient-to-r from-green-th to-blue-th pt-24 sm:pt-32">
 
     <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
         <div class="text-center">

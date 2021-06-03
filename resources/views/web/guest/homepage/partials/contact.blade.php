@@ -1,9 +1,8 @@
 <section id="contact" class="bg-fixed" style="background-image: url(https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80)">
-    <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
         <div class="relative bg-white shadow-xl rounded-lg">
 
             <div class="grid grid-cols-1 lg:grid-cols-3">
-                <!-- Contact information -->
                 <div class="relative overflow-hidden py-10 px-6 bg-gradient-to-br from-green-th to-blue-th sm:px-10 xl:p-12">
                     <div class="absolute inset-0 pointer-events-none sm:hidden" aria-hidden="true">
                         <svg class="absolute inset-0 w-full h-full" width="343" height="388" viewBox="0 0 343 388" fill="none" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +46,6 @@
                     <dl class="mt-8 space-y-6">
                         <dt><span class="sr-only">Phone number</span></dt>
                         <dd class="flex text-base text-white">
-                            <!-- Heroicon name: outline/phone -->
                             <svg class="flex-shrink-0 w-6 h-6 text-black-th" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                             </svg>
@@ -55,7 +53,6 @@
                         </dd>
                         <dt><span class="sr-only">Email</span></dt>
                         <dd class="flex text-base text-white">
-                            <!-- Heroicon name: outline/mail -->
                             <svg class="flex-shrink-0 w-6 h-6 text-black-th" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
@@ -130,6 +127,7 @@
                         </div>
                     </form>
                 </div>
+                
             </div>
         </div>
     </div>
