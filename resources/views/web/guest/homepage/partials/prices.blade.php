@@ -41,95 +41,31 @@
                 <div class="bg-white shadow-2xl overflow-hidden rounded-lg">
                     <ul class="divide-y divide-gray-200">
 
-                        <li>
-                            <div class="min-w-0 p-4 items-center grid grid-cols-12 gap-4">
-                                <div class="col-span-1 sm:block hidden">
-                                    <img class="h-12 w-12 rounded-full" src="{{ url('img/adult.png') }}" alt="">
-                                </div>
-                                <div class="col-span-7">
-                                    <p class="sm:text-2xl text-md font-medium text-black-th">Adulte</p>
-                                </div>
-                                <div class="sm:col-span-4 col-span-5">
-                                    <p class="sm:text-2xl text-lg font-bold text-green-th flex justify-end">20 €</p>
-                                </div>
-                            </div>
-                        </li>
+                        @foreach (App\Models\Price::all() as $price)
 
                         <li>
                             <div class="min-w-0 p-4 items-center grid grid-cols-12 gap-4">
                                 <div class="col-span-1 sm:block hidden">
-                                    <img class="h-12 w-12 rounded-full" src="{{ url('img/ado.png') }}" alt="">
+                                    <img class="h-12 w-12 rounded-full" src="{{ url('storage/'.$price->image) }}" alt="">
                                 </div>
                                 <div class="col-span-7">
-                                    <p class="sm:text-2xl text-md font-medium text-black-th">Ado <span class="text-sm pl-2">(moins de 18 ans)</span></p>
+                                    <p class="sm:text-2xl text-md font-medium text-black-th">
+                                    {{ $price->public }}
+                                    @if ($price->description != null)
+                                        <span class="text-sm pl-2">{{ $price->description }}</span>
+                                    @endif
+                                    </p>
                                 </div>
                                 <div class="sm:col-span-4 col-span-5">
-                                    <p class="sm:text-2xl text-lg font-bold text-green-th flex justify-end">17 €</p>
+                                    <p class="sm:text-2xl text-lg font-bold text-green-th flex justify-end">{{ $price->price }}</p>
                                 </div>
                             </div>
                         </li>
 
-                        <li>
-                            <div class="min-w-0 p-4 items-center grid grid-cols-12 gap-4">
-                                <div class="col-span-1 sm:block hidden">
-                                    <img class="h-12 w-12 rounded-full" src="{{ url('img/kid.png') }}" alt="">
-                                </div>
-                                <div class="col-span-7">
-                                    <p class="sm:text-2xl text-md font-medium text-black-th">Enfant - parcours jaune & rose</p>
-                                </div>
-                                <div class="sm:col-span-4 col-span-5">
-                                    <p class="sm:text-2xl text-lg font-bold text-green-th flex justify-end">10 €</p>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="min-w-0 p-4 items-center grid grid-cols-12 gap-4">
-                                <div class="col-span-1 sm:block hidden">
-                                    <img class="h-12 w-12 rounded-full" src="{{ url('img/kid.png') }}" alt="">
-                                </div>
-                                <div class="col-span-7">
-                                    <p class="sm:text-2xl text-md font-medium text-black-th">Enfant - parcours rose <span class="text-sm pl-2">(sans harnais)</span></p>
-                                </div>
-                                <div class="sm:col-span-4 col-span-5">
-                                    <p class="sm:text-2xl text-lg font-bold text-green-th flex justify-end">3 €</p>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="min-w-0 p-4 items-center grid grid-cols-12 gap-4">
-                                <div class="col-span-1 sm:block hidden">
-                                    <img class="h-12 w-12 rounded-full" src="{{ url('img/group.png') }}" alt="">
-                                </div>
-                                <div class="col-span-7">
-                                    <p class="sm:text-2xl text-md font-medium text-black-th">Dès 4 personnes</p>
-                                </div>
-                                <div class="sm:col-span-4 col-span-5">
-                                    <p class="sm:text-2xl text-lg font-bold text-green-th flex justify-end"> -1 € <span class="text-sm pl-2 sm:block hidden">par place</span></p>
-                                    <p class="text-green-th flex justify-end text-sm sm:hidden">par place</p>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="min-w-0 p-4 items-center grid grid-cols-12 sm:gap-4 gap-0">
-                                <div class="col-span-1 sm:block hidden">
-                                    <img class="h-12 w-12 rounded-full" src="{{ url('img/group.png') }}" alt="">
-                                </div>
-                                <div class="sm:col-span-7 col-span-6">
-                                    <p class="sm:text-2xl text-md font-medium text-black-th">Dès 10 personnes</p>
-                                </div>
-                                <div class="sm:col-span-4 col-span-6">
-                                    <p class="sm:text-2xl text-lg font-bold text-green-th flex justify-end"> -1,50 € <span class="text-sm pl-2 sm:block hidden">par place</span></p>
-                                    <p class="text-green-th flex justify-end text-sm sm:hidden">par place</p>
-                                </div>
-                            </div>
-                        </li>
+                        @endforeach
 
                     </ul>
                 </div>
-
 
             </div>
 

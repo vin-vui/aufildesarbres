@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Livewire\Reports;
+use App\Http\Livewire\Courses;
+use App\Http\Livewire\Hours;
+use App\Http\Livewire\Prices;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +22,11 @@ Route::get('/', function () {
     return view('web/guest/homepage/index');
 })->name('welcome');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->group(function ()
+{
+    Route::get('news', Reports::class)->name('reports');
+    Route::get('parcours', Courses::class)->name('courses');
+    Route::get('horaires', Hours::class)->name('hours');
+    Route::get('tarifs', Prices::class)->name('prices');
+});
+

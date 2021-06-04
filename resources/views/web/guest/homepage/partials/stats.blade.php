@@ -22,23 +22,23 @@
                                 Parcours
                             </dt>
                             <dd class="order-1 text-5xl font-extrabold text-green-th">
-                                8
+                                {{ App\Models\Course::all()->count() }}
                             </dd>
                         </div>
                         <div class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
                             <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
-                                Difficultés
+                                Niveaux de difficultés
                             </dt>
                             <dd class="order-1 text-5xl font-extrabold text-green-th">
-                                5
+                                {{ App\Models\Course::distinct()->count('level') }}
                             </dd>
                         </div>
                         <div class="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l">
                             <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
-                                mètres de hauteur
+                                Mètres de hauteur
                             </dt>
                             <dd class="order-1 text-5xl font-extrabold text-green-th">
-                                1 à 16
+                                {{ App\Models\Course::whereNotNull('max_height')->orderBy('max_height', 'asc')->first()->max_height }} à {{ App\Models\Course::whereNotNull('max_height')->orderBy('max_height', 'desc')->first()->max_height }}
                             </dd>
                         </div>
                     </dl>

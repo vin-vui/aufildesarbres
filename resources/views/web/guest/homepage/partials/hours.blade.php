@@ -5,59 +5,27 @@
             <div class="col-span-2">
                 <div class="max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
 
+                    @foreach (App\Models\Hour::all() as $hour)
+
                     <div class="flex flex-col rounded-lg shadow-2xl overflow-hidden">
                         <div class="flex-shrink-0">
-                            <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1489919712052-23b74fe5bbf2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" alt="">
+                            <img class="h-48 w-full object-cover" src="{{ url('storage/'.$hour->image) }}" alt="">
                         </div>
                         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
                             <div class="flex-1">
                                 <a href="#" class="block mt-2">
                                     <p class="text-xl font-semibold text-gray-900">
-                                        Mai - Juin
+                                        {{ $hour->title }}
                                     </p>
                                     <p class="mt-3 text-base text-gray-500">
-                                        Tous les mecredis & tous les weekend de 14h à 19h
+                                        {{ $hour->description }}
                                     </p>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex flex-col rounded-lg shadow-2xl overflow-hidden">
-                        <div class="flex-shrink-0">
-                            <img class="h-48 w-full object-cover" src="https://images.unsplash.com/uploads/14121010130570e22bcdf/e1730efe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" alt="">
-                        </div>
-                        <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                            <div class="flex-1">
-                                <a href="#" class="block mt-2">
-                                    <p class="text-xl font-semibold text-gray-900">
-                                        Juillet - Août
-                                    </p>
-                                    <p class="mt-3 text-base text-gray-500">
-                                        Tous les jours de 11h à 19h
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col rounded-lg shadow-2xl overflow-hidden">
-                        <div class="flex-shrink-0">
-                            <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1507502707541-f369a3b18502?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80" alt="">
-                        </div>
-                        <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                            <div class="flex-1">
-                                <a href="#" class="block mt-2">
-                                    <p class="text-xl font-semibold text-gray-900">
-                                        Nocturne
-                                    </p>
-                                    <p class="mt-3 text-base text-gray-500">
-                                        Sur réservation
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
 
                 </div>
             </div>

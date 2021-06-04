@@ -15,190 +15,38 @@
         </div>
         <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
 
+            @foreach (App\Models\Course::all() as $course)
+
             <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
                 <div class="flex-shrink-0">
-                    <img class="h-48 w-full object-cover" src="https://www.parcaventure-malbuisson.fr/img/parcours/rose/rose_01.jpg" alt="">
+                    <img class="h-48 w-full object-cover" src="{{ url('storage/'.$course->image) }}" alt="">
                 </div>
                 <div class="flex-1 bg-white p-6 flex flex-col justify-between">
                     <div class="flex-1">
+                    <div class="flex justify-between">
                         <p class="text-sm font-medium text-green-th">
-                            <a href="#" class="hover:underline">
-                                Enfant
-                            </a>
+                            {{ $course->level }}
                         </p>
-                        <a href="#" class="block mt-2">
-                            <p class="text-xl font-semibold text-gray-900">
-                                Rose
+                        <p class="text-sm font-medium text-gray-500">
+                            @if($course->max_height != null)
+                                hauteur max. : {{ $course->max_height }} m
+                            @endif
+                        </p>
+                        </div>
+                        <div class="block mt-2">
+                            <p class="text-xl font-semibold text-black-th">
+                                {{ $course->title }}
                             </p>
                             <p class="mt-3 text-base text-gray-500">
-                                Le parcours le plus simple pour vos bambins. Même pas besoin de harnais !
+                                {{ $course->description }}
                             </p>
-                        </a>
+                        </div>
+
                     </div>
                 </div>
             </div>
 
-            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                <div class="flex-shrink-0">
-                    <img class="h-48 w-full object-cover" src="https://www.parcaventure-malbuisson.fr/img/parcours/jaune/jaune_01.jpg" alt="">
-                </div>
-                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                    <div class="flex-1">
-                        <p class="text-sm font-medium text-green-th">
-                            <a href="#" class="hover:underline">
-                                Enfant
-                            </a>
-                        </p>
-                        <a href="#" class="block mt-2">
-                            <p class="text-xl font-semibold text-gray-900">
-                                Jaune
-                            </p>
-                            <p class="mt-3 text-base text-gray-500">
-                                À un mètre du sol, les enfants évolueront sur une succession de ponts de singe et de passerelles mouvantes.
-                                Ils ramperont dans des tonneaux et dévaleront des tyroliennes en toute sécurité.
-                            </p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                <div class="flex-shrink-0">
-                    <img class="h-48 w-full object-cover" src="https://www.parcaventure-malbuisson.fr/img/parcours/vert/vert_02.jpg" alt="">
-                </div>
-                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                    <div class="flex-1">
-                        <p class="text-sm font-medium text-green-th">
-                            <a href="#" class="hover:underline">
-                                Débutant
-                            </a>
-                        </p>
-                        <a href="#" class="block mt-2">
-                            <p class="text-xl font-semibold text-gray-900">
-                                Vert
-                            </p>
-                            <p class="mt-3 text-base text-gray-500">
-                                Un peu plus haut que le parcour précédent, petits et grands s’entraideront à passer d’arbres en arbres au moyen de balançoires, de prises d’escalade, slackline et bien entendu de multiples tyroliennes.
-                            </p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                <div class="flex-shrink-0">
-                    <img class="h-48 w-full object-cover" src="https://www.parcaventure-malbuisson.fr/img/parcours/autres/autres_09.jpg" alt="">
-                </div>
-                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                    <div class="flex-1">
-                        <p class="text-sm font-medium text-green-th">
-                            <a href="#" class="hover:underline">
-                                Débutant
-                            </a>
-                        </p>
-                        <a href="#" class="block mt-2">
-                            <p class="text-xl font-semibold text-gray-900">
-                                Blanc
-                            </p>
-                            <p class="mt-3 text-base text-gray-500">
-                                Venez détendre vos bras sur des tyroliennes !
-                            </p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                <div class="flex-shrink-0">
-                    <img class="h-48 w-full object-cover" src="https://www.parcaventure-malbuisson.fr/img/parcours/bleu/bleu_02.jpg" alt="">
-                </div>
-                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                    <div class="flex-1">
-                        <p class="text-sm font-medium text-green-th">
-                            <a href="#" class="hover:underline">
-                                Sportif du dimanche
-                            </a>
-                        </p>
-                        <a href="#" class="block mt-2">
-                            <p class="text-xl font-semibold text-gray-900">
-                                Bleu
-                            </p>
-                            <p class="mt-3 text-base text-gray-500">
-                                4 ateliers montants vous permettrons d’atteindre une hauteur de 15 mètres, oserez-vous vous lancer sur les tyroliennes ?! Funambules, passerelles et cordes vous permettront de retourner au sol.
-                            </p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                <div class="flex-shrink-0">
-                    <img class="h-48 w-full object-cover" src="https://www.parcaventure-malbuisson.fr/img/parcours/orange/orange_01.jpg" alt="">
-                </div>
-                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                    <div class="flex-1">
-                        <p class="text-sm font-medium text-green-th">
-                            <a href="#" class="hover:underline">
-                                Sportif du dimanche
-                            </a>
-                        </p>
-                        <a href="#" class="block mt-2">
-                            <p class="text-xl font-semibold text-gray-900">
-                                Orange
-                            </p>
-                            <p class="mt-3 text-base text-gray-500">
-                                Des tyroliennes à l'infini !
-                            </p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                <div class="flex-shrink-0">
-                    <img class="h-48 w-full object-cover" src="https://www.parcaventure-malbuisson.fr/img/parcours/rouge/rouge_03.jpg" alt="">
-                </div>
-                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                    <div class="flex-1">
-                        <p class="text-sm font-medium text-green-th">
-                            <a href="#" class="hover:underline">
-                                Sportif
-                            </a>
-                        </p>
-                        <a href="#" class="block mt-2">
-                            <p class="text-xl font-semibold text-gray-900">
-                                Rouge
-                            </p>
-                            <p class="mt-3 text-base text-gray-500">
-                                Pas fatigué ?! Voici de quoi vous achever !
-                            </p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                <div class="flex-shrink-0">
-                    <img class="h-48 w-full object-cover" src="https://www.parcaventure-malbuisson.fr/img/parcours/bleu/bleu_03.jpg" alt="">
-                </div>
-                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                    <div class="flex-1">
-                        <p class="text-sm font-medium text-green-th">
-                            <a href="#" class="hover:underline">
-                                Sportif
-                            </a>
-                        </p>
-                        <a href="#" class="block mt-2">
-                            <p class="text-xl font-semibold text-gray-900">
-                                Noir
-                            </p>
-                            <p class="mt-3 text-base text-gray-500">
-                                Venez détendre vos bras sur des tyroliennes !
-                            </p>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
 
         </div>
     </div>
