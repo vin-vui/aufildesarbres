@@ -1,4 +1,5 @@
 <section class="-mt-32 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8" aria-labelledby="contact-heading">
+
     <div class="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
 
         @foreach (App\Models\Report::all() as $report)
@@ -11,8 +12,8 @@
                         {!! $report->logo !!}
                     </svg>
                 </div>
-                <h3 class="text-xl font-medium text-black-th">{{ $report->title }}</h3>
-                <p class="mt-4 text-base text-gray-500">
+                <h3 class="text-xl font-medium text-black-th pointer-events-none">{{ $report->title }}</h3>
+                <p class="mt-4 text-base text-gray-500 pointer-events-none">
                     {{ $report->description }}
                 </p>
             </div>
@@ -23,7 +24,7 @@
             </div>
             @else
             <div class="p-6 bg-black-th rounded-bl-2xl rounded-br-2xl md:px-8">
-                <a class="text-base font-medium text-green-th">{{ $report->go_to }}</a>
+                <div class="text-base font-medium text-green-th pointer-events-none">{{ $report->go_to }}</div>
             </div>
             @endif
 
@@ -32,4 +33,5 @@
         @endforeach
 
     </div>
+
 </section>

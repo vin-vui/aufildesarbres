@@ -1,4 +1,4 @@
-<section id="contact" class="bg-fixed" style="background-image: url(https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80)">
+<section id="contact" class="bg-fixed" style="background-image: url(https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2560&q=80)">
     <div class="max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
         <div class="relative bg-white shadow-xl rounded-lg">
 
@@ -37,10 +37,10 @@
                             </defs>
                         </svg>
                     </div>
-                    <h2 class="text-3xl font-extrabold text-black-th tracking-tight sm:text-4xl">
+                    <h2 class="text-3xl font-extrabold text-black-th tracking-tight sm:text-4xl pointer-events-none">
                         Contact
                     </h2>
-                    <p class="mt-6 max-w-3xl text-lg leading-7 text-white">
+                    <p class="mt-6 max-w-3xl text-lg leading-7 text-white pointer-events-none">
                         Pour toute demande spécifique, merci d'utiliser le formulaire.
                     </p>
                     <dl class="mt-8 space-y-6">
@@ -49,14 +49,14 @@
                             <svg class="flex-shrink-0 w-6 h-6 text-black-th" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                             </svg>
-                            <span class="ml-3">+33 6 31 13 31 67</span>
+                            <a href="tel:+33631133167" class="ml-3 hover:underline">+33 6 31 13 31 67</a>
                         </dd>
                         <dt><span class="sr-only">Email</span></dt>
                         <dd class="flex text-base text-white">
                             <svg class="flex-shrink-0 w-6 h-6 text-black-th" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
-                            <span class="ml-3">aufildesarbres25@gmail.com</span>
+                            <a href="mailto:aufildesarbres25@gmail.com" class="ml-3 hover:underline">aufildesarbres25@gmail.com</a>
                         </dd>
                     </dl>
                     <ul class="mt-8 flex space-x-12" role="list">
@@ -73,7 +73,7 @@
 
                 <!-- Contact form -->
                 <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
-                    <h3 class="text-lg font-medium text-gray-900">Envoyez-nous un message</h3>
+                    <h3 class="text-lg font-medium text-gray-900 pointer-events-none">Envoyez-nous un message</h3>
                     <form action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                         <div>
                             <label for="first_name" class="block text-sm font-medium text-gray-900">Prénom</label>
@@ -127,7 +127,7 @@
                         </div>
                     </form>
                 </div>
-                
+
             </div>
         </div>
     </div>

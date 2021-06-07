@@ -7,13 +7,22 @@
                     Parcours
                 </h2>
 
-                <div class="">
+                <div class="hidden sm:block">
                     <button wire:click="create()" type="button" class="uppercase inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md
                     text-white bg-blue-th hover:bg-white hover:text-black-th hover:border-black-th focus:outline-none focus:shadow-outline-indigo focus:border-ornage active:bg-white">
                         <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         {{ __('Ajouter un Parcours') }}
+                    </button>
+                </div>
+
+                <div class="fixed bottom-2 right-2 block sm:hidden">
+                    <button wire:click="create()" type="button" class="shadow-lg uppercase inline-flex items-center p-2 border border-transparent text-sm leading-5 font-medium rounded-full
+                    text-white bg-blue-th hover:bg-white hover:text-black-th hover:border-black-th focus:outline-none focus:shadow-outline-indigo focus:border-ornage active:bg-white">
+                        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
                     </button>
                 </div>
 
@@ -25,7 +34,7 @@
         </div>
     </header>
 
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 py-8">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 sm:py-6 py-2">
 
         @if ($courses)
         <div class="flex flex-col">
@@ -45,7 +54,7 @@
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
                                         Difficulté
                                     </th>
-                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider whitespace-nowrap">
                                         Hauteur max.
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
@@ -84,7 +93,7 @@
                                     </td>
 
                                     <td class="px-6 py-4">
-                                        <div class="text-sm text-gray-900">{{ $course->description }}</div>
+                                        <div class="text-sm text-gray-900 truncate w-16">{{ $course->description }}</div>
                                     </td>
 
                                     <td class="pl-6 py-4 whitespace-nowrap text-right text-sm font-medium">

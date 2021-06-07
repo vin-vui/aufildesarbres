@@ -1,12 +1,12 @@
-<section id="prices" class="pt-32">
+<section id="tarifs" class="py-32">
     <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
         <div class="lg:grid lg:grid-cols-3 lg:gap-24 lg:items-center">
 
             <div>
-                <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
+                <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl pointer-events-none">
                     Tarifs
                 </h2>
-                <p class="mt-6 max-w-3xl text-lg leading-7 text-gray-500">
+                <p class="mt-6 max-w-3xl text-lg leading-7 text-gray-500 pointer-events-none">
                     Tarifs préférentiels sur demande pour les groupes, les clubs, les colonies de vacances, les scolaires, etc.
                 </p>
 
@@ -22,7 +22,7 @@
                     </div>
                 </div>
 
-                <div class="flex mt-8">
+                <div class="flex mt-8 pointer-events-none">
                     <div class="mr-4 flex-shrink-0 self-end">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-green-th" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
@@ -37,7 +37,7 @@
                 </div>
             </div>
 
-            <div class="mt-12 col-span-2">
+            <div class="mt-12 col-span-2 pointer-events-none">
                 <div class="bg-white shadow-2xl overflow-hidden rounded-lg">
                     <ul class="divide-y divide-gray-200">
 
@@ -71,4 +71,12 @@
 
         </div>
     </div>
+
 </section>
+
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
+  <div class="absolute inset-0 flex items-center" aria-hidden="true">
+    <div class="w-full border-t border-gray-300"></div>
+  </div>
+</div>

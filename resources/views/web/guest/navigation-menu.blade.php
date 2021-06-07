@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="flex justify-between items-center py-2 md:justify-start md:space-x-10">
 
-            <div class="flex justify-start lg:w-0 lg:flex-1">
+            <div class="flex justify-start">
                 <a href="#">
                     <img class="h-12 w-auto sm:h-16" src="{{ url('img/logo.png') }}" alt="">
                 </a>
@@ -22,14 +22,17 @@
                 <a href="{{ route('welcome') }}" class="text-base font-medium text-white hover:text-black-th">
                     Accueil
                 </a>
-                <a href="{{ route('welcome') }}/#courses" class="text-base font-medium text-white hover:text-black-th">
+                <a href="{{ route('welcome') }}/#parcours" class="text-base font-medium text-white hover:text-black-th">
                     Nos Parcours
                 </a>
-                <a href="{{ route('welcome') }}/#prices" class="text-base font-medium text-white hover:text-black-th">
-                    Nos Tarifs
+                <a href="{{ route('welcome') }}/#tarifs" class="text-base font-medium text-white hover:text-black-th">
+                    Tarifs
                 </a>
-                <a href="{{ route('welcome') }}/#hours" class="text-base font-medium text-white hover:text-black-th">
-                    Nos Horaires
+                <a href="{{ route('welcome') }}/#horaires" class="text-base font-medium text-white hover:text-black-th">
+                    Horaires
+                </a>
+                <a href="{{ route('welcome') }}/#photos" class="text-base font-medium text-white hover:text-black-th">
+                    Galerie Photo
                 </a>
                 <a href="{{ route('welcome') }}/#contact" class="text-base font-medium text-white hover:text-black-th">
                     Nous Contacter
@@ -66,7 +69,7 @@
                             </span>
                         </a>
 
-                        <a @click="open = !open" href="{{ route('welcome') }}/#courses" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                        <a @click="open = !open" href="{{ route('welcome') }}/#parcours" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
                             <svg class="flex-shrink-0 h-6 w-6 text-blue-th" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
                             </svg>
@@ -75,21 +78,31 @@
                             </span>
                         </a>
 
-                        <a @click="open = !open" href="{{ route('welcome') }}/#prices" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                        <a @click="open = !open" href="{{ route('welcome') }}/#tarifs" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
                             <svg class="flex-shrink-0 h-6 w-6 text-blue-th" mlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
                             </svg>
                             <span class="ml-3 text-base font-medium text-gray-900">
-                                Nos tarifs
+                                Tarifs
                             </span>
                         </a>
 
-                        <a @click="open = !open" href="{{ route('welcome') }}/#hours" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                        <a @click="open = !open" href="{{ route('welcome') }}/#horaires" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
                             <svg class="flex-shrink-0 h-6 w-6 text-blue-th" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                             <span class="ml-3 text-base font-medium text-gray-900">
-                                Nos horaires
+                                Horaires
+                            </span>
+                        </a>
+
+                        <a @click="open = !open" href="{{ route('welcome') }}/#photos" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                            <svg class="flex-shrink-0 h-6 w-6 text-blue-th" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span class="ml-3 text-base font-medium text-gray-900">
+                                Galerie Photo
                             </span>
                         </a>
 

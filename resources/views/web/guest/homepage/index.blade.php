@@ -8,6 +8,7 @@
         @include('web.guest.homepage.partials.courses')
         @include('web.guest.homepage.partials.prices')
         @include('web.guest.homepage.partials.hours')
+        @include('web.guest.homepage.partials.photos')
         @include('web.guest.homepage.partials.contact')
         @include('web.guest.homepage.partials.map')
 

@@ -25,8 +25,12 @@ module.exports = {
     variants: {
         extend: {
             opacity: ['disabled'],
+            backgroundColor: ['group-hover'],
         },
     },
 
-    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+    plugins: [
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/typography'),
+    ],
 };

@@ -1,8 +1,8 @@
-<section id="hours" class="py-32">
+<section id="horaires" class="py-32">
     <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
         <div class="lg:grid lg:grid-cols-3 lg:gap-24 lg:items-center flex-col flex">
 
-            <div class="col-span-2">
+            <div class="col-span-2 pointer-events-none">
                 <div class="max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
 
                     @foreach (App\Models\Hour::all() as $hour)
@@ -13,14 +13,14 @@
                         </div>
                         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
                             <div class="flex-1">
-                                <a href="#" class="block mt-2">
+                                <div class="block mt-2">
                                     <p class="text-xl font-semibold text-gray-900">
                                         {{ $hour->title }}
                                     </p>
                                     <p class="mt-3 text-base text-gray-500">
                                         {{ $hour->description }}
                                     </p>
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -31,10 +31,10 @@
             </div>
 
             <div class="sm:order-last order-first mb-6">
-                <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
+                <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl pointer-events-none">
                     Horaires
                 </h2>
-                <p class="mt-6 max-w-3xl text-lg leading-7 text-gray-500">
+                <p class="mt-6 max-w-3xl text-lg leading-7 text-gray-500 pointer-events-none">
                     Possibilité d'ouverture sur réservation
                 </p>
 

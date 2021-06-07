@@ -6,6 +6,7 @@ use App\Http\Livewire\Reports;
 use App\Http\Livewire\Courses;
 use App\Http\Livewire\Hours;
 use App\Http\Livewire\Prices;
+use App\Http\Livewire\Photos;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,5 +29,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function ()
     Route::get('parcours', Courses::class)->name('courses');
     Route::get('horaires', Hours::class)->name('hours');
     Route::get('tarifs', Prices::class)->name('prices');
+    Route::get('photos', Photos::class)->name('photos');
 });
 

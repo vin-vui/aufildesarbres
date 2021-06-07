@@ -31,7 +31,7 @@
             </a>
         </div>
         <p class="mt-8 text-center text-base text-gray-400">
-            &copy; 2021 Vinvui, Tous droits réservés.
+            &copy; 2021 <a href="https://www.vinvui.com" target="_blank" class="hover:underline">Vinvui</a>, Tous droits réservés.
         </p>
     </div>
 </footer>
