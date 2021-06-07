@@ -37,12 +37,8 @@
                                 <label for="category" class="block text-sm font-medium text-gray-700">Catégorie</label>
                                 <span id="category_description" class="text-sm text-gray-500">Facultatif</span>
                             </div>
-                            <select id="category" name="category" wire:model="category" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                                <option>Sans catégorie</option>
-                                <option>Catégorie 1</option>
-                                <option>Catégorie 2</option>
-                                <option>Catégorie 3</option>
-                            </select>
+                            <input type="text" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="category" placeholder="" wire:model="category">
+                            @error('category') <span class="text-red-500">{{ $message }}</span>@enderror
                         </div>
 
                         <div class="lg:grid lg:grid-cols-3 lg:gap-2 lg:items-center mb-4">

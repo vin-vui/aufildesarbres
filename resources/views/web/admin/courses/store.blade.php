@@ -16,29 +16,28 @@
 
                         <div class="mb-4">
                             <label for="title" class="block text-gray-500 text-sm mb-2">Nom du parcours</label>
-                            <input type="text" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="title" placeholder="" wire:model="title">
+                            <input type="text" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="title" placeholder="" wire:model="title">
                             @error('title') <span class="text-red-500">{{ $message }}</span>@enderror
                         </div>
 
                         <div class="mb-4">
                             <label for="level" class="block text-gray-500 text-sm mb-2">Niveau de difficulté</label>
-                            <input type="text" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="level" placeholder="" wire:model="level">
+                            <input type="text" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="level" placeholder="" wire:model="level">
                             @error('level') <span class="text-red-500">{{ $message }}</span>@enderror
                         </div>
 
                         <div class="mb-4">
-                            <label for="max_height" class="block text-gray-500 text-sm mb-2">Hauteur maximum</label>
-                            <input type="number" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="max_height" placeholder="" wire:model="max_height">
+                            <div class="flex justify-between">
+                                <label for="max_height" class="block text-sm font-medium text-gray-700">Hauteur maximum</label>
+                                <span id="max_height_description" class="text-sm text-gray-500">Laissez 0 pour aucune mesure</span>
+                            </div>
+                            <input type="number" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="max_height" placeholder="" wire:model="max_height">
                             @error('max_height') <span class="text-red-500">{{ $message }}</span>@enderror
                         </div>
 
                         <div class="mb-4">
                             <label for="description" class="block text-gray-500 text-sm mb-2">Description</label>
-                            <textarea rows="4" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="description" wire:model="description" placeholder=""></textarea>
+                            <textarea rows="4" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="description" wire:model="description" placeholder=""></textarea>
                             @error('description') <span class="text-red-500">{{ $message }}</span>@enderror
                         </div>
 
