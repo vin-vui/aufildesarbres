@@ -38,7 +38,7 @@
                                 Mètres de hauteur
                             </dt>
                             <dd class="order-1 text-5xl font-extrabold text-green-th">
-                                {{ App\Models\Course::whereNotNull('max_height')->orderBy('max_height', 'asc')->first()->max_height }} à {{ App\Models\Course::whereNotNull('max_height')->orderBy('max_height', 'desc')->first()->max_height }}
+                                {{ App\Models\Course::whereNotNull('max_height')->where('max_height', '<>', 0)->orderBy('max_height', 'asc')->first()->max_height }} à {{ App\Models\Course::whereNotNull('max_height')->orderBy('max_height', 'desc')->first()->max_height }}
                             </dd>
                         </div>
                     </dl>

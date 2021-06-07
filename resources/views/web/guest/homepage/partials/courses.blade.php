@@ -2,14 +2,14 @@
     <path fill="rgba(249, 250, 251, 1)" fill-opacity="1" d="M0,256L240,128L480,256L720,96L960,160L1200,96L1440,224L1440,0L1200,0L960,0L720,0L480,0L240,0L0,0Z"></path>
 </svg>
 
-<section id="parcours" class="relative bg-gradient-to-r from-green-th to-blue-th pt-24 sm:pt-32 pointer-events-none">
+<section id="parcours" class="relative bg-gradient-to-r from-green-th to-blue-th pt-24 sm:pt-32">
 
     <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
         <div class="text-center">
-            <h2 class="text-3xl tracking-tight font-extrabold text-black-th sm:text-4xl">
+            <h2 class="text-3xl tracking-tight font-extrabold text-black-th sm:text-4xl pointer-events-none">
                 Nos parcours
             </h2>
-            <p class="mt-3 max-w-2xl mx-auto text-xl text-white sm:mt-4">
+            <p class="mt-3 max-w-2xl mx-auto text-xl text-white sm:mt-4 pointer-events-none">
                 En ligne de vie continue pour une sécurité parfaite !
             </p>
         </div>
@@ -23,17 +23,20 @@
                 </div>
                 <div class="flex-1 bg-white p-6 flex flex-col justify-between">
                     <div class="flex-1">
-                    <div class="flex justify-between">
-                        <p class="text-sm font-medium text-green-th">
-                            {{ $course->level }}
-                        </p>
-                        <p class="text-sm font-medium text-gray-500">
-                            @if($course->max_height != null)
-                                hauteur max. : {{ $course->max_height }} m
-                            @endif
-                        </p>
+                        <div class="flex justify-between">
+                            <p class="text-sm font-medium text-green-th pointer-events-none">
+                                {{ $course->level }}
+                            </p>
+                            <p class="text-sm font-medium text-gray-500 inline-flex items-center" title="Hauteur maximum">
+                                @if($course->max_height != 0)
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                </svg>
+                                {{ $course->max_height }} m
+                                @endif
+                            </p>
                         </div>
-                        <div class="block mt-2">
+                        <div class="block mt-2 pointer-events-none">
                             <p class="text-xl font-semibold text-black-th">
                                 {{ $course->title }}
                             </p>

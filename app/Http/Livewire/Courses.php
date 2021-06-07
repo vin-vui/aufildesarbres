@@ -46,7 +46,7 @@ class Courses extends Component
     {
         $this->title = '';
         $this->level = '';
-        $this->max_height = '';
+        $this->max_height = 0;
         $this->description = '';
         $this->color = '';
         $this->image = '';

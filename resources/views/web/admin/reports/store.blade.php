@@ -23,6 +23,7 @@
                         <div class="mb-4">
                             <label for="logo" class="block text-sm font-medium text-gray-700">Logo</label>
                             <select id="logo" name="logo" wire:model="logo" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                <option> - </option>
                                 <option value='<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />'>
                                     Bulle
                                 </option>

@@ -89,11 +89,17 @@
                                     </td>
 
                                     <td class="px-6 py-4">
+                                        @if ($course->max_height == 0)
+                                        <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-gray-100 text-gray-800">
+                                            NR
+                                        </span>
+                                        @else
                                         <div class="text-sm text-gray-900">{{ $course->max_height }} m</div>
+                                        @endif
                                     </td>
 
                                     <td class="px-6 py-4">
-                                        <div class="text-sm text-gray-900 truncate w-16">{{ $course->description }}</div>
+                                        <div class="text-sm text-gray-900">{{ $course->description }}</div>
                                     </td>
 
                                     <td class="pl-6 py-4 whitespace-nowrap text-right text-sm font-medium">
