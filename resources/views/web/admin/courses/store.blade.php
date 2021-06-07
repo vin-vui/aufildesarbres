@@ -69,6 +69,15 @@
                             <div class="col-span-1 pt-8 mx-auto">
                                 <div class="flex-shrink-0 h-24 w-24 bg-cover bg-center rounded-full" style="background-image: url({{ url('storage/'.$this->image) }})"></div>
                             </div>
+
+                            @if(!is_string($image))
+                            @if ($image)
+                            <div class="col-span-3 pt-8">
+                                <img src="{{ $image->temporaryUrl() }}">
+                            </div>
+                            @endif
+                            @endif
+
                         </div>
 
                     </div>

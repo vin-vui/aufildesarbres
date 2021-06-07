@@ -16,15 +16,13 @@
 
                         <div class="mb-4">
                             <label for="inputTitle" class="block text-gray-500 text-sm mb-2">Période</label>
-                            <input type="text" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="inputTitle" placeholder="" wire:model="title">
+                            <input type="text" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="inputTitle" placeholder="" wire:model="title">
                             @error('title') <span class="text-red-500">{{ $message }}</span>@enderror
                         </div>
 
                         <div class="mb-4">
                             <label for="inputParagraph" class="block text-gray-500 text-sm mb-2">Description</label>
-                            <textarea rows="4" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="inputParagraph" wire:model="description" placeholder=""></textarea>
+                            <textarea rows="4" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="inputParagraph" wire:model="description" placeholder=""></textarea>
                             @error('description') <span class="text-red-500">{{ $message }}</span>@enderror
                         </div>
 
@@ -55,6 +53,14 @@
                             <div class="col-span-1 pt-8 mx-auto">
                                 <div class="flex-shrink-0 h-24 w-24 bg-cover bg-center rounded-full" style="background-image: url({{ url('storage/'.$this->image) }})"></div>
                             </div>
+
+                            @if(!is_string($image))
+                            @if ($image)
+                            <div class="col-span-3 pt-8">
+                                <img src="{{ $image->temporaryUrl() }}">
+                            </div>
+                            @endif
+                            @endif
                         </div>
 
                     </div>
