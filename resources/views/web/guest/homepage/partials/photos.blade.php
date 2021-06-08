@@ -20,8 +20,8 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <div class="absolute bottom-2 left-2 block ">
-                    <p class="text-lg font-medium text-white truncate pointer-events-none opacity-0 group-hover:opacity-100">{{ $photo->title }}</p>
-                    <p class="text-sm font-medium text-gray-100 truncate pointer-events-none opacity-0 group-hover:opacity-100">{{ $photo->description }}</p>
+                    <p class="text-lg font-medium text-white pointer-events-none opacity-0 group-hover:opacity-100">{{ $photo->title }}</p>
+                    <p class="text-sm font-medium text-gray-100 pointer-events-none opacity-0 group-hover:opacity-100">{{ $photo->description }}</p>
                 </div>
             </div>
             @else
