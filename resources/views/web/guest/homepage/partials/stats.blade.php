@@ -56,8 +56,7 @@
                         Sécurité
                     </p>
                     <p class="mt-3 text-lg text-gray-300 pointer-events-none">
-                        Tous nos parcours sont garanti avec une sécurité maximale ! <br>
-                        Tous les équipements sont homologués et passent les tests les plus stricts en matière de sécurité.
+                        Tous nos parcours sont équipés d'un système de ligne de vie continue et contrôlé annuellement pour vous garantir une sécurité maximale.
                     </p>
                     <div class="mt-8">
                         <div class="inline-flex rounded-md shadow">

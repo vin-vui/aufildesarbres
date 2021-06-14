@@ -52,7 +52,7 @@
                                         Public
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
-                                        description
+                                        infos
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
                                         Prix

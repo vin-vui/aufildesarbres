@@ -78,7 +78,7 @@
                     </div>
                     <div class="relative max-w-md mx-auto py-12 px-4 space-y-6 sm:max-w-3xl sm:py-16 sm:px-6 lg:max-w-none lg:p-0 lg:col-start-4 lg:col-span-6">
                         <h2 class="text-3xl font-extrabold text-white" id="join-heading">Restauration</h2>
-                        <p class="text-lg text-white">Pour un bon départ ou une petite pause, nous vous proposons des barres de céréales et des boissons. Nous mettons à votre disposition des tables de pic-nique entouré d'un cadre exceptionnel.</p>
+                        <p class="text-lg text-white">Pour un bon départ ou une petite pause, nous vous proposons des produits locaux fabriqués uniquement dans le Doubs ! Des tables de pic-nique sont également à votre disposition.</p>
                     </div>
                 </div>
             </div>

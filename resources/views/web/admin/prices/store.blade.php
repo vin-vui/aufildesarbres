@@ -22,7 +22,7 @@
 
                         <div class="mb-4">
                             <div class="flex justify-between">
-                                <label for="phone" class="block text-sm font-medium text-gray-700">Description</label>
+                                <label for="phone" class="block text-sm font-medium text-gray-700">Information supplémentaire</label>
                                 <span id="phone_description" class="text-sm text-gray-500">Facultatif</span>
                             </div>
                             <input type="text" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="description" wire:model="description" placeholder="">
@@ -70,7 +70,7 @@
                             </div>
                             @endif
                             @endif
-                            
+
                         </div>
 
                     </div>
