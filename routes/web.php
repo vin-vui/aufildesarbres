@@ -23,6 +23,8 @@ Route::get('/', function () {
     return view('web/guest/homepage/index');
 })->name('welcome');
 
+Route::post('contact', 'App\Http\Controllers\ContactController@contact')->name('contact');
+
 Route::middleware(['auth:sanctum', 'verified'])->group(function ()
 {
     Route::get('news', Reports::class)->name('reports');

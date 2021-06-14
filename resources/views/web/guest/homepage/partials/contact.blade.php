@@ -43,6 +43,9 @@
                     <p class="mt-6 max-w-3xl text-lg leading-7 text-white pointer-events-none">
                         Pour toute demande spécifique, merci d'utiliser le formulaire.
                     </p>
+                    <p class="mt-6 max-w-3xl text-lg leading-7 text-white pointer-events-none">
+                        Pour toute demande ou pré-réservation spécifique à <b>un groupe</b>, merci d'utiliser le formulaire prévu à cet effet.
+                    </p>
                     <dl class="mt-8 space-y-6">
                         <dt><span class="sr-only">Phone number</span></dt>
                         <dd class="flex text-base text-white">
@@ -71,13 +74,83 @@
                 </div>
 
                 <!-- Contact form -->
-                <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
+                <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12" x-data="{ active: 'p1' }">
+
                     <h3 class="text-lg font-medium text-gray-900 pointer-events-none">Envoyez-nous un message</h3>
-                    <form action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+
+                    <div class="sm:flex sm:flex-col sm:align-center mt-4">
+                        <div class="relative self-center mx-auto bg-gray-100 rounded-lg p-0.5 flex">
+                            <button :class="{ 'text-gray-900 bg-white border-gray-200 shadow-sm': active === 'p1' }" type="button" @click="active = 'p1'" class="relative w-1/2 border border-transparent rounded-md py-2 text-sm font-medium text-gray-700 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-blue-th focus:z-10 sm:w-auto sm:px-8">Demande générale</button>
+                            <button :class="{ 'text-gray-900 bg-white border-gray-200 shadow-sm': active === 'p2' }" type="button" @click="active = 'p2'" class="relative w-1/2 border border-transparent rounded-md py-2 text-sm font-medium text-gray-700 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-blue-th focus:z-10 sm:w-auto sm:px-8 ml-0.5">Demande pour un groupe</button>
+                        </div>
+                    </div>
+
+                    <form x-show.transition.in.opacity.duration.500ms="active === 'p1'" action="{{ route('contact') }}" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                        @csrf
                         <div>
-                            <label for="first_name" class="block text-sm font-medium text-gray-900">Prénom</label>
+                            <div class="flex justify-between">
+                                <label for="first_name" class="block text-sm font-medium text-gray-900">Prénom</label>
+                                <span id="first_name-optional" class="text-sm text-red-500">*</span>
+                            </div>
                             <div class="mt-1">
-                                <input type="text" name="first_name" id="first_name" autocomplete="given-name" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-th focus:border-green-th border-gray-300 rounded-md">
+                                <input required type="text" name="first_name" id="first_name" autocomplete="given-name" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-th focus:border-green-th border-gray-300 rounded-md">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="last_name" class="block text-sm font-medium text-gray-900">Nom</label>
+                            <div class="mt-1">
+                                <input type="text" name="last_name" id="last_name" autocomplete="family-name" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-th focus:border-green-th border-gray-300 rounded-md">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-900">Email</label>
+                            <div class="mt-1">
+                                <input id="email" name="email" type="email" autocomplete="email" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-th focus:border-green-th border-gray-300 rounded-md">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-900">Téléphone</label>
+                            <div class="mt-1">
+                                <input type="text" name="phone" id="phone" autocomplete="tel" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-th focus:border-green-th border-gray-300 rounded-md" aria-describedby="phone-optional">
+                            </div>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <div class="flex justify-between">
+                                <label for="subject" class="block text-sm font-medium text-gray-900">Sujet</label>
+                                <span id="subject-optional" class="text-sm text-red-500">*</span>
+                            </div>
+                            <div class="mt-1">
+                                <input required type="text" name="subject" id="subject" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-th focus:border-green-th border-gray-300 rounded-md">
+                            </div>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <div class="flex justify-between">
+                                <label for="message" class="block text-sm font-medium text-gray-900">Message</label>
+                                <span id="message-optional" class="text-sm text-red-500">*</span>
+                            </div>
+                            <div class="mt-1">
+                                <textarea required id="message" name="message" rows="4" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-th focus:border-green-th border-gray-300 rounded-md" aria-describedby="message-max"></textarea>
+                            </div>
+                        </div>
+                        <div class="sm:col-span-2 sm:flex sm:justify-end">
+                            <button type="submit" class="group inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-th hover:bg-gray-50 hover:text-black-th">
+                                Envoyer
+                                <svg xmlns="http://www.w3.org/2000/svg" class="-mr-1 ml-3 h-5 w-5 text-white group-hover:text-black-th" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+
+                    <form x-show.transition.in.opacity.duration.500ms="active === 'p2'" action="{{ route('contact') }}" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                        @csrf
+                        <div>
+                            <div class="flex justify-between">
+                                <label for="first_name" class="block text-sm font-medium text-gray-900">Prénom</label>
+                                <span id="first_name-optional" class="text-sm text-red-500">*</span>
+                            </div>
+                            <div class="mt-1">
+                                <input required type="text" name="first_name" id="first_name" autocomplete="given-name" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-th focus:border-green-th border-gray-300 rounded-md">
                             </div>
                         </div>
                         <div>
@@ -101,10 +174,28 @@
                                 <input type="text" name="phone" id="phone" autocomplete="tel" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-th focus:border-green-th border-gray-300 rounded-md" aria-describedby="phone-optional">
                             </div>
                         </div>
+                        <div>
+                            <div class="flex justify-between">
+                                <label for="count" class="block text-sm font-medium text-gray-900">Nombre de personnes</label>
+                                <span id="count-optional" class="text-sm text-red-500">*</span>
+                            </div>
+                            <div class="mt-1">
+                                <input required id="count" name="count" type="number" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-th focus:border-green-th border-gray-300 rounded-md">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between">
+                                <label for="date" class="block text-sm font-medium text-gray-900">Date</label>
+                                <span id="date-optional" class="text-sm text-red-500">*</span>
+                            </div>
+                            <div class="mt-1">
+                                <input required type="date" name="date" id="date" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-th focus:border-green-th border-gray-300 rounded-md" aria-describedby="date-optional">
+                            </div>
+                        </div>
                         <div class="sm:col-span-2">
                             <label for="subject" class="block text-sm font-medium text-gray-900">Sujet</label>
                             <div class="mt-1">
-                                <input type="text" name="subject" id="subject" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-th focus:border-green-th border-gray-300 rounded-md">
+                                <input required type="text" name="subject" id="subject" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-th focus:border-green-th border-gray-300 rounded-md">
                             </div>
                         </div>
                         <div class="sm:col-span-2">
@@ -112,7 +203,7 @@
                                 <label for="message" class="block text-sm font-medium text-gray-900">Message</label>
                             </div>
                             <div class="mt-1">
-                                <textarea id="message" name="message" rows="4" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-th focus:border-green-th border-gray-300 rounded-md" aria-describedby="message-max"></textarea>
+                                <textarea required id="message" name="message" rows="4" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-th focus:border-green-th border-gray-300 rounded-md" aria-describedby="message-max"></textarea>
                             </div>
                         </div>
                         <div class="sm:col-span-2 sm:flex sm:justify-end">
@@ -124,7 +215,29 @@
                             </button>
                         </div>
                     </form>
+
                 </div>
+
+                @if(Session::has('success'))
+                <div aria-live="assertive" class="fixed inset-x-0 bottom-0 z-50 flex items-end justify-center px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
+                    <div class="max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden">
+                        <div class="p-4">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <svg class="h-6 w-6 text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <div class="ml-3 w-0 flex-1 pt-0.5">
+                                    <p class="text-sm font-medium text-gray-900">
+                                        {{ Session::get('success') }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endif
 
             </div>
         </div>
