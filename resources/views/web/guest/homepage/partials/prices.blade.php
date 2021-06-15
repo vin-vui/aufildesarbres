@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="flex mt-8 pointer-events-none">
-                    <div class="mr-4 flex-shrink-0 self-end">
+                    <div class="mr-4 flex-shrink-0 self-start">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-green-th" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
                         </svg>
@@ -32,8 +32,17 @@
                         <p class="mt-1">
                             -10% sur présentation de la carte Avantage Jeune
                         </p>
+                        <p class="mt-4 text-xs flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 pr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                            </svg>
+                            Pas de réduction sur les forfaits à 3 et 10 euros.
+                        </p>
                     </div>
                 </div>
+
+
+
             </div>
 
             <div class="mt-12 col-span-2 pointer-events-none">

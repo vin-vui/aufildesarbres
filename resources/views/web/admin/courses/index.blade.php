@@ -49,6 +49,9 @@
                                         Image
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                                        Ordre
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
                                         Titre
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
@@ -77,6 +80,14 @@
                                     <td class="px-6 py-4 whitespace-nowrap text-center">
                                         <div class="flex items-center justify-center">
                                             <div class="flex-shrink-0 h-12 w-12 bg-cover bg-center rounded-full" style="background-image: url({{ url('storage/'.$course->image) }})"></div>
+                                        </div>
+                                    </td>
+
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">
+                                            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                                                {{ $course->order }}
+                                            </span>
                                         </div>
                                     </td>
 

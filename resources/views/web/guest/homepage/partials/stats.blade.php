@@ -48,7 +48,7 @@
 
         <div class="relative bg-black-th -mt-16 z-10">
             <div class="h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
-                <img class="w-full h-full object-cover" src="https://www.parcaventure-malbuisson.fr/img/parcours/autres/autres_06.jpg" alt="">
+                <img class="w-full h-full object-cover" src="{{ url('img/brume.jpg') }}" alt="">
             </div>
             <div class="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
                 <div class="md:ml-auto md:w-1/2 md:pl-10">

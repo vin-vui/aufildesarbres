@@ -15,7 +15,7 @@
         </div>
         <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
 
-            @foreach (App\Models\Course::all() as $course)
+            @foreach (App\Models\Course::orderBy('order')->get() as $course)
 
             <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
                 <div class="flex-shrink-0">
@@ -60,7 +60,7 @@
                 <div class="relative z-10 lg:col-start-1 lg:row-start-1 lg:col-span-4 pt-16 lg:py-16 lg:bg-transparent">
                     <div class="max-w-md mx-auto px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:p-0">
                         <div class="aspect-w-10 aspect-h-6 sm:aspect-w-2 sm:aspect-h-1 lg:aspect-w-1">
-                            <img class="object-cover object-center rounded-3xl shadow-2xl" src="https://www.parcaventure-malbuisson.fr/img/parcours/autres/autres_10.jpg" alt="">
+                            <img class="object-cover object-center rounded-3xl shadow-2xl" src="https://images.unsplash.com/photo-1464895216333-d859b45bf394?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" alt="">
                         </div>
                     </div>
                 </div>

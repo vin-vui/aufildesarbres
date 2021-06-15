@@ -14,7 +14,7 @@ class Courses extends Component
 {
     use WithFileUploads;
 
-    public $title, $level, $max_height, $description, $color, $image, $course_id;
+    public $title, $order, $level, $max_height, $description, $color, $image, $course_id;
 
     public $isOpen = 0;
     public $confirming;
@@ -22,7 +22,7 @@ class Courses extends Component
     public function render()
     {
         return view('web.admin.courses.index', [
-            'courses' => Course::all(),
+            'courses' => Course::orderBy('order')->get(),
         ]);
     }
 
@@ -45,6 +45,7 @@ class Courses extends Component
     private function resetInputFields()
     {
         $this->title = '';
+        $this->order = 0;
         $this->level = '';
         $this->max_height = 0;
         $this->description = '';
@@ -57,6 +58,7 @@ class Courses extends Component
     {
         $dataValid = $this->validate([
             'title' => 'required',
+            'order' => 'required',
             'level' => 'required',
             'max_height' => 'nullable',
             'description' => 'required',
@@ -84,6 +86,7 @@ class Courses extends Component
 
         $this->course_id = $id;
         $this->title = $course->title;
+        $this->order = $course->order;
         $this->description = $course->description;
         $this->image = $course->image;
         $this->color = $course->color;

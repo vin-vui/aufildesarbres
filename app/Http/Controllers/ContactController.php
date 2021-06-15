@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Carbon\Carbon;
 
 class ContactController extends Controller
 {
@@ -19,8 +20,11 @@ class ContactController extends Controller
                 'phone' => $request->get('phone'),
                 'subject' => $request->get('subject'),
                 'user_message' => $request->get('message'),
-                'count' => $request->get('count'),
-                'date' => $request->get('date'),
+                'count_people' => $request->get('count_people'),
+                'count_accompanist' => $request->get('count_accompanist'),
+                'date_arrival' => Carbon::parse($request->get('date_arrival'))->format('H:i d/m/Y'),
+                'date_departure' => Carbon::parse($request->get('date_departure'))->format('H:i d/m/Y'),
+                'institution' => $request->get('institution'),
             ],
             function ($message) use ($request) {
                 $message->from(env("MAIL_FROM_ADDRESS"));

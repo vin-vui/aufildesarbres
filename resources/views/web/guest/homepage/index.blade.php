@@ -11,6 +11,7 @@
         @include('web.guest.homepage.partials.photos')
         @include('web.guest.homepage.partials.contact')
         @include('web.guest.homepage.partials.map')
+        @include('web.guest.homepage.partials.team')
 
     </div>
 

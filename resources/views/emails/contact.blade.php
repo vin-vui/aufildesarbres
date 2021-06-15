@@ -337,32 +337,56 @@
 
                                         <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">{{ $user_message }}</p>
                                         <div class="table" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
-                                            <table style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; margin: 30px auto; width: 100%; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%;">
-                                                <thead style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+
+                                            <table>
+                                                <tbody>
                                                     <tr>
-                                                        <th style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; border-bottom: 1px solid #edeff2; padding-bottom: 8px;">Email</th>
-                                                        <th style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; border-bottom: 1px solid #edeff2; padding-bottom: 8px;">Téléphone</th>
-                                                        @if ($count != null)
-                                                        <th style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; border-bottom: 1px solid #edeff2; padding-bottom: 8px;">Groupe</th>
-                                                        @endif
-                                                        @if ($date != null)
-                                                        <th style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; border-bottom: 1px solid #edeff2; padding-bottom: 8px;">Date</th>
-                                                        @endif
+                                                        <td>Email</td>
+                                                        <td>{{ $email }}</td>
                                                     </tr>
-                                                </thead>
-                                                <tbody style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
                                                     <tr>
-                                                        <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 15px; line-height: 18px;">{{ $email }}</td>
-                                                        <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 15px; line-height: 18px;">{{ $phone }}</td>
-                                                        @if ($count != null)
-                                                        <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 15px; line-height: 18px;">{{ $count }}</td>
-                                                        @endif
-                                                        @if ($date != null)
-                                                        <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 15px; line-height: 18px;">{{ $date }}</td>
-                                                        @endif
+                                                        <td>Téléphone</td>
+                                                        <td>{{ $phone }}</td>
                                                     </tr>
+
+                                                    @if ($institution != null)
+                                                    <tr>
+                                                        <td>Nom de l'établissement / association</td>
+                                                        <td>{{ $institution }}</td>
+                                                    </tr>
+                                                    @endif
+
+                                                    @if ($count_people != null)
+                                                    <tr>
+                                                        <td>Nombre de personnes</td>
+                                                        <td>{{ $count_people }}</td>
+                                                    </tr>
+                                                    @endif
+
+                                                    @if ($count_accompanist != null)
+                                                    <tr>
+                                                        <td>Nombre d'accompagnateurs</td>
+                                                        <td>{{ $count_accompanist }}</td>
+                                                    </tr>
+                                                    @endif
+
+                                                    @if ($date_arrival != null)
+                                                    <tr>
+                                                        <td>Heure d'arrivée</td>
+                                                        <td>{{ $date_arrival }}</td>
+                                                    </tr>
+                                                    @endif
+
+                                                    @if ($date_departure != null)
+                                                    <tr>
+                                                        <td>Heure de départ</td>
+                                                        <td>{{ $date_departure }}</td>
+                                                    </tr>
+                                                    @endif
+
                                                 </tbody>
                                             </table>
+
                                         </div>
                                     </td>
                                 </tr>
