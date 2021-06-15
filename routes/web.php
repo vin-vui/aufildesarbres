@@ -19,9 +19,8 @@ use App\Http\Livewire\Photos;
 |
 */
 
-Route::get('/', function () {
-    return view('web/guest/homepage/index');
-})->name('welcome');
+Route::get('/', function () { return view('web.guest.homepage.index'); })->name('welcome');
+Route::get('mentions-legales', function () { return view('web.guest.legal-notice'); })->name('legal-notice');
 
 Route::post('contact', 'App\Http\Controllers\ContactController@contact')->name('contact');
 
