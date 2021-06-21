@@ -14,7 +14,7 @@
 
         @if (count($this->sessions) > 0)
             <div class="mt-5 space-y-6">
-                <!-- Other Browser Sessions -->
+
                 @foreach ($this->sessions as $session)
                     <div class="flex items-center">
                         <div>
@@ -39,7 +39,7 @@
                                     {{ $session->ip_address }},
 
                                     @if ($session->is_current_device)
-                                        <span class="text-green-500 font-semibold">{{ __('This device') }}</span>
+                                        <span class="font-semibold text-green-500">{{ __('This device') }}</span>
                                     @else
                                         {{ __('Last active') }} {{ $session->last_active }}
                                     @endif
@@ -61,7 +61,6 @@
             </x-jet-action-message>
         </div>
 
-        <!-- Log Out Other Devices Confirmation Modal -->
         <x-jet-dialog-modal wire:model="confirmingLogout">
             <x-slot name="title">
                 {{ __('Log Out Other Browser Sessions') }}
@@ -71,7 +70,7 @@
                 {{ __('Please enter your password to confirm you would like to log out of your other browser sessions across all of your devices.') }}
 
                 <div class="mt-4" x-data="{}" x-on:confirming-logout-other-browser-sessions.window="setTimeout(() => $refs.password.focus(), 250)">
-                    <x-jet-input type="password" class="mt-1 block w-3/4"
+                    <x-jet-input type="password" class="block w-3/4 mt-1"
                                 placeholder="{{ __('Password') }}"
                                 x-ref="password"
                                 wire:model.defer="password"

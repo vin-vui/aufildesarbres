@@ -12,7 +12,7 @@
 
         <li>
           <div class="space-y-6">
-            <img class="w-40 h-40 mx-auto rounded-full shadow-lg xl:w-56 xl:h-56" src="{{ url('img/paul.png') }}" alt="">
+            <img class="w-40 h-40 mx-auto rounded-full shadow-2xl xl:w-56 xl:h-56" src="{{ url('img/paul.png') }}" alt="">
             <div class="space-y-2">
               <div class="space-y-1 text-lg font-medium leading-6">
                 <h3>Paul</h3>
@@ -23,7 +23,7 @@
 
         <li>
           <div class="space-y-6">
-            <img class="w-40 h-40 mx-auto rounded-full shadow-lg xl:w-56 xl:h-56" src="{{ url('img/rachel.png') }}" alt="">
+            <img class="w-40 h-40 mx-auto rounded-full shadow-2xl xl:w-56 xl:h-56" src="{{ url('img/rachel.png') }}" alt="">
             <div class="space-y-2">
               <div class="space-y-1 text-lg font-medium leading-6">
                 <h3>Rachel</h3>
@@ -34,7 +34,7 @@
 
         <li>
           <div class="space-y-6">
-            <img class="w-40 h-40 mx-auto rounded-full shadow-lg xl:w-56 xl:h-56" src="{{ url('img/pierre-antoine.png') }}" alt="">
+            <img class="w-40 h-40 mx-auto rounded-full shadow-2xl xl:w-56 xl:h-56" src="{{ url('img/pierre-antoine.png') }}" alt="">
             <div class="space-y-2">
               <div class="space-y-1 text-lg font-medium leading-6">
                 <h3>Pierre-Antoine </h3>
