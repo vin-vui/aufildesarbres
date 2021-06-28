@@ -23,6 +23,21 @@
 
                 <div class="flex mt-8 pointer-events-none">
                     <div class="self-start flex-shrink-0 mr-4">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-green-th" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 15.536c-1.171 1.952-3.07 1.952-4.242 0-1.172-1.953-1.172-5.119 0-7.072 1.171-1.952 3.07-1.952 4.242 0M8 10.5h4m-4 3h4m9-1.5a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold">Moyen de paiement</h4>
+                        <p class="mt-1">
+                            Espèces, Carte Bancaire, Chèque, Chèque Vacances
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex mt-8 pointer-events-none">
+                    <div class="self-start flex-shrink-0 mr-4">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-green-th" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
                         </svg>
