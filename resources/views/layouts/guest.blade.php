@@ -34,20 +34,7 @@
 
     <script src="{{ mix('js/app.js') }}" defer></script>
 
-    <script>
-        window.axeptioSettings = {
-            clientId: "60c8474cf2af487d38d8e327"
-            , cookiesVersion: "ga_only"
-        , };
-
-        (function(d, s) {
-            var t = d.getElementsByTagName(s)[0]
-                , e = d.createElement(s);
-            e.async = true;
-            e.src = "//static.axept.io/sdk.js";
-            t.parentNode.insertBefore(e, t);
-        })(document, "script");
-    </script>
+    <script defer data-domain="parcaventure-malbuisson.fr" src="https://plausible.io/js/plausible.js"></script>
 
 </head>
 <body>
