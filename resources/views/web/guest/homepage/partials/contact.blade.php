@@ -82,7 +82,7 @@
                     </div>
 
                 </div>
-                
+
                 <div class="px-6 py-10 sm:px-10 lg:col-span-2 xl:p-12" x-data="{ active: 'p1' }">
 
                     <h3 class="text-lg font-medium text-gray-900 pointer-events-none">Envoyez-nous un message</h3>
@@ -96,6 +96,7 @@
 
                     <form x-show.transition.in.opacity.duration.500ms="active === 'p1'" action="{{ route('contact') }}" method="POST" class="grid grid-cols-1 mt-6 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                         @csrf
+                        @honeypot
                         <div>
                             <div class="flex justify-between">
                                 <label for="first_name" class="block text-sm font-medium text-gray-900">Prénom</label>
@@ -153,6 +154,7 @@
 
                     <form x-show.transition.in.opacity.duration.500ms="active === 'p2'" action="{{ route('contact') }}" method="POST" class="grid grid-cols-1 mt-6 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                         @csrf
+                        @honeypot
                         <div>
                             <div class="flex justify-between">
                                 <label for="first_name" class="block text-sm font-medium text-gray-900">Prénom</label>

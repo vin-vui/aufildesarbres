@@ -11,7 +11,6 @@ class ContactController extends Controller
 
     public function contact(Request $request)
     {
-
         \Mail::send('emails.contact',
             [
                 'first_name' => $request->get('first_name'),
