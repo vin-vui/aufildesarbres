@@ -96,7 +96,7 @@
 
                     <form x-show.transition.in.opacity.duration.500ms="active === 'p1'" action="{{ route('contact') }}" method="POST" class="grid grid-cols-1 mt-6 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                         @csrf
-                        @honeypot
+                        <x-honeypot />
                         <div>
                             <div class="flex justify-between">
                                 <label for="first_name" class="block text-sm font-medium text-gray-900">Prénom</label>
@@ -154,7 +154,7 @@
 
                     <form x-show.transition.in.opacity.duration.500ms="active === 'p2'" action="{{ route('contact') }}" method="POST" class="grid grid-cols-1 mt-6 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                         @csrf
-                        @honeypot
+                        <x-honeypot />
                         <div>
                             <div class="flex justify-between">
                                 <label for="first_name" class="block text-sm font-medium text-gray-900">Prénom</label>
