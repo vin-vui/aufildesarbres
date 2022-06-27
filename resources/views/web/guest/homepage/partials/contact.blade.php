@@ -184,7 +184,7 @@
                         </div>
                         <div>
                             <div class="flex justify-between">
-                                <label for="phone" class="block text-sm font-medium text-gray-900">Téléphone</label>
+                                <label for="phone" class="block text-sm font-medium text-gray-900">Téléphone portable de l'organisateur de préférence</label>
                                 <span id="phone-optional" class="text-sm text-red-500">*</span>
                             </div>
                             <div class="mt-1">
