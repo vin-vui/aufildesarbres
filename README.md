@@ -10,6 +10,6 @@
     <a href="https://parcaventure-malbuisson.fr"><img src="https://badgen.net/badge/Laravel/8.x/orange" alt="Laravel version"></a>
 </p>
 
-<p align="center">
-    [![Laravel Forge Site Deployment Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fforge.laravel.com%2Fsite-badges%2Fb7e74eec-8767-48f9-bf47-0fc22fd65280%3Fdate%3D1&style=flat)](https://forge.laravel.com)
+<p align="center">    
+    <a href="https://forge.laravel.com"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fforge.laravel.com%2Fsite-badges%2Fb7e74eec-8767-48f9-bf47-0fc22fd65280%3Fdate%3D1&style=flat" alt="Laravel Forge Site Deployment Status"></a>
 </p>
