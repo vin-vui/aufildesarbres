@@ -5,9 +5,9 @@
 </p>
 
 <p align="center">
-    <a href="https://parcaventure-malbuisson.fr"><img src="https://badgen.net/badge/version/1.0.1/blue" alt="Build version"></a>
-    <a href="https://parcaventure-malbuisson.fr"><img src="https://badgen.net/badge/PHP/7.4/green" alt="PHP version"></a>
-    <a href="https://parcaventure-malbuisson.fr"><img src="https://badgen.net/badge/Laravel/8.x/orange" alt="Laravel version"></a>
+    <a href="https://parcaventure-malbuisson.fr"><img src="https://badgen.net/badge/version/1.2.1/blue" alt="Build version"></a>
+    <a href="https://parcaventure-malbuisson.fr"><img src="https://badgen.net/badge/PHP/8.1/green" alt="PHP version"></a>
+    <a href="https://parcaventure-malbuisson.fr"><img src="https://badgen.net/badge/Laravel/8.x/red" alt="Laravel version"></a>
 </p>
 
 <p align="center">    
