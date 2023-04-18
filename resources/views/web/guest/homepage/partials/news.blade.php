@@ -12,7 +12,7 @@
                 </div>
                 <h3 class="text-xl font-medium text-black-th pointer-events-none">Evénement Spécial</h3>
                 <p class="mt-4 text-base text-gray-500 pointer-events-none">
-                    Viens fêter ton anniversaire au parc ! Avec ce bon d'invitation pour tes amis ! (à imprimer)
+                    Vous avez envie de fêter un anniversaire, n'hésitez pas à nous contacter et à télécharger vos cartons d'invitations.
                 </p>
             </div>
             <div class="p-6 bg-blue-th rounded-bl-2xl rounded-br-2xl md:px-8">
