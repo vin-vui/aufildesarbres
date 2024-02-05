@@ -4,17 +4,8 @@
     </a>
 </p>
 
-<p align="center">
-    <a href="https://parcaventure-malbuisson.fr"><img src="https://badgen.net/badge/version/1.2.2/blue" alt="Build version"></a>
-    <a href="https://parcaventure-malbuisson.fr"><img src="https://badgen.net/badge/PHP/8.1/green" alt="PHP version"></a>
-    <a href="https://parcaventure-malbuisson.fr"><img src="https://badgen.net/badge/Laravel/8.x/red" alt="Laravel version"></a>
-</p>
+# 🔎 Projet
 
-<p align="center">    
-    <a href="https://forge.laravel.com"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fforge.laravel.com%2Fsite-badges%2Fb7e74eec-8767-48f9-bf47-0fc22fd65280%3Fdate%3D1&style=flat" alt="Laravel Forge Site Deployment Status"></a>
-</p>
-
-<p>
 Le projet consiste en la création d'un site vitrine pour un parc d'accrobranche situé à Malbuisson, dans la région du Doubs. Ce site a pour but de présenter de manière attractive et accessible les informations clés sur le parc, telles que ses parcours, tarifs, horaires, et éventuelles offres spéciales, tout en offrant aux visiteurs potentiels une expérience utilisateur fluide et engageante.
 
 Pour répondre à des besoins spécifiques en termes de gestion de contenu et de fonctionnalités personnalisées, le choix a été fait de développer ce site vitrine en utilisant Laravel, un framework PHP reconnu pour sa flexibilité, sa sécurité, et son efficacité. Laravel permettra de concevoir un système de gestion de contenu (CMS) sur mesure, adapté aux particularités du parc d'accrobranche et à ses exigences en matière de mise à jour et de maintenance du contenu.
@@ -26,4 +17,12 @@ En plus des fonctionnalités de base d'un site vitrine, telles que la présentat
 Le développement en Laravel offrira également la possibilité d'intégrer des solutions de sécurité avancées pour protéger le site contre les vulnérabilités en ligne et assurer la protection des données des utilisateurs, en conformité avec les réglementations en vigueur.
 
 En somme, ce projet de site vitrine avec CMS custom pour un parc d'accrobranche à Malbuisson représente une démarche stratégique visant à améliorer la visibilité et l'accessibilité du parc, tout en offrant une plateforme facile à gérer pour les opérateurs. Le choix de Laravel comme socle technologique garantit une solution robuste, évolutive et sécurisée, capable de répondre aux besoins actuels et futurs du parc.
-</p>
+
+# 🛠️ Stack
+
+![Static Badge](https://img.shields.io/badge/laravel-grey?style=for-the-badge&logo=laravel&link=https://laravel.com)
+![Static Badge](https://img.shields.io/badge/tailwindcss-grey?style=for-the-badge&logo=tailwindcss&link=https://tailwindcss.com)
+![Static Badge](https://img.shields.io/badge/livewire-grey?style=for-the-badge&logo=livewire&link=https://laravel-livewire.com)
+![Static Badge](https://img.shields.io/badge/alpine.js-grey?style=for-the-badge&logo=alpinedotjs&link=https://alpinejs.dev)
+[![Laravel Forge Site Deployment Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fforge.laravel.com%2Fsite-badges%2Fb7e74eec-8767-48f9-bf47-0fc22fd65280%3Fdate%3D1&style=for-the-badge)](https://forge.laravel.com/servers/473478/sites/1365012)
+
