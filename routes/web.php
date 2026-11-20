@@ -3,11 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use Spatie\Honeypot\ProtectAgainstSpam;
 
-use App\Http\Livewire\Reports;
-use App\Http\Livewire\Courses;
-use App\Http\Livewire\Hours;
-use App\Http\Livewire\Prices;
-use App\Http\Livewire\Photos;
+use App\Livewire\Reports;
+use App\Livewire\Courses;
+use App\Livewire\Hours;
+use App\Livewire\Prices;
+use App\Livewire\Photos;
 
 /*
 |--------------------------------------------------------------------------

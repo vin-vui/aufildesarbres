@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Livewire;
 
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -8,21 +8,21 @@ use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
-use App\Models\Hour;
+use App\Models\Price;
 
-class Hours extends Component
+class Prices extends Component
 {
     use WithFileUploads;
 
-    public $title, $description, $image, $hour_id;
+    public $public, $description, $price, $image, $price_id;
 
     public $isOpen = 0;
     public $confirming;
 
     public function render()
     {
-        return view('web.admin.hours.index', [
-            'hours' => Hour::all(),
+        return view('web.admin.prices.index', [
+            'prices' => Price::all(),
         ]);
     }
 
@@ -44,17 +44,19 @@ class Hours extends Component
 
     private function resetInputFields()
     {
-        $this->title = '';
+        $this->public = '';
         $this->description = '';
+        $this->price = '';
         $this->image = '';
-        $this->hour_id = '';
+        $this->price_id = '';
     }
 
     public function store()
     {
         $dataValid = $this->validate([
-            'title' => 'required',
-            'description' => 'required',
+            'public' => 'required',
+            'description' => 'nullable',
+            'price' => 'required',
             'image' => 'nullable',
         ]);
 
@@ -64,9 +66,9 @@ class Hours extends Component
             $dataValid['image'] = null;
         }
 
-        Hour::updateOrCreate(['id' => $this->hour_id], $dataValid);
+        Price::updateOrCreate(['id' => $this->price_id], $dataValid);
 
-        session()->flash('alert', $this->hour_id ? 'Hour Updated Successfully.' : 'Hour Created Successfully.');
+        session()->flash('alert', $this->price_id ? 'Price Updated Successfully.' : 'Price Created Successfully.');
 
         $this->closeModal();
         $this->resetInputFields();
@@ -74,12 +76,13 @@ class Hours extends Component
 
     public function edit($id)
     {
-        $hour = Hour::findOrFail($id);
+        $price = Price::findOrFail($id);
 
-        $this->hour_id = $id;
-        $this->title = $hour->title;
-        $this->description = $hour->description;
-        $this->image = $hour->image;
+        $this->price_id = $id;
+        $this->public = $price->public;
+        $this->description = $price->description;
+        $this->price = $price->price;
+        $this->image = $price->image;
 
         $this->openModal();
     }
@@ -91,9 +94,9 @@ class Hours extends Component
 
     public function delete($id)
     {
-        $hour = Hour::find($id)->delete();
+        $price = Price::find($id)->delete();
 
-        session()->flash('message', 'Hour Deleted Successfully.');
+        session()->flash('message', 'Price Deleted Successfully.');
     }
 
     private function store_image($image)
@@ -104,7 +107,7 @@ class Hours extends Component
         /**
          * Si c'est la catégorie n'éxiste pas
          */
-        if ($this->hour_id == "") {
+        if ($this->price_id == "") {
             $new = true;
             /**
              * On check si une image a été uploadée
@@ -120,9 +123,9 @@ class Hours extends Component
             /**
              * Si n'y a pas d'image déjà enregistrée
              */
-            $current_hour = Hour::find($this->hour_id);
+            $current_price = Price::find($this->price_id);
 
-            if ($current_hour->image == null) {
+            if ($current_price->image == null) {
                 if ($image != "") {
                     $store = true;
                 }
@@ -134,10 +137,10 @@ class Hours extends Component
                 /**
                  * Si on veut changer l'image déjà présente
                  */
-                if ($current_hour->image != $image) {
+                if ($current_price->image != $image) {
                     if ($image != "") {
-                        if(File::exists('storage/'.$current_hour->image)) {
-                            File::delete('storage/'.$current_hour->image);
+                        if(File::exists('storage/'.$current_price->image)) {
+                            File::delete('storage/'.$current_price->image);
                         }
 
                         $store = true;
@@ -150,7 +153,7 @@ class Hours extends Component
             return $this->image->store('images', 'public');
         } else {
             if (!$new) {
-                return $current_hour->image;
+                return $current_price->image;
             } else {
                 return null;
             }

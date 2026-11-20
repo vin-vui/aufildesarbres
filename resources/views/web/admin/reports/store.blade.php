@@ -16,13 +16,13 @@
 
                         <div class="mb-4">
                             <label for="title" class="block text-gray-500 text-sm mb-2">Titre</label>
-                            <input type="text" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="title" placeholder="" wire:model="title">
+                            <input type="text" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="title" placeholder="" wire:model.live="title">
                             @error('title') <span class="text-red-500">{{ $message }}</span>@enderror
                         </div>
 
                         <div class="mb-4">
                             <label for="logo" class="block text-sm font-medium text-gray-700">Logo</label>
-                            <select id="logo" name="logo" wire:model="logo" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            <select id="logo" name="logo" wire:model.live="logo" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                                 <option> - </option>
                                 <option value='<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />'>
                                     Bulle
@@ -38,19 +38,19 @@
 
                         <div class="mb-4">
                             <label for="description" class="block text-gray-500 text-sm mb-2">Description</label>
-                            <textarea rows="4" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="description" wire:model="description" placeholder=""></textarea>
+                            <textarea rows="4" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="description" wire:model.live="description" placeholder=""></textarea>
                             @error('description') <span class="text-red-500">{{ $message }}</span>@enderror
                         </div>
 
                         <div class="mb-4">
                             <label for="go_to" class="block text-gray-500 text-sm mb-2">Titre du lien ou Accroche</label>
-                            <input type="text" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="go_to" placeholder="" wire:model="go_to">
+                            <input type="text" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="go_to" placeholder="" wire:model.live="go_to">
                             @error('go_to') <span class="text-red-500">{{ $message }}</span>@enderror
                         </div>
 
                         <div class="mb-4">
                             <label for="link" class="block text-gray-500 text-sm mb-2">Lien</label>
-                            <input type="text" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="link" placeholder="" wire:model="link">
+                            <input type="text" class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="link" placeholder="" wire:model.live="link">
                             @error('link') <span class="text-red-500">{{ $message }}</span>@enderror
                         </div>
 

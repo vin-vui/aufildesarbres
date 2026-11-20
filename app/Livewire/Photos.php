@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Livewire;
 
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -8,21 +8,21 @@ use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
-use App\Models\Course;
+use App\Models\Photo;
 
-class Courses extends Component
+class Photos extends Component
 {
     use WithFileUploads;
 
-    public $title, $order, $level, $max_height, $description, $color, $image, $course_id;
+    public $title, $description, $image, $category, $photo_id;
 
     public $isOpen = 0;
     public $confirming;
 
     public function render()
     {
-        return view('web.admin.courses.index', [
-            'courses' => Course::orderBy('order')->get(),
+        return view('web.admin.photos.index', [
+            'photos' => Photo::all(),
         ]);
     }
 
@@ -45,25 +45,19 @@ class Courses extends Component
     private function resetInputFields()
     {
         $this->title = '';
-        $this->order = 0;
-        $this->level = '';
-        $this->max_height = 0;
         $this->description = '';
-        $this->color = '';
         $this->image = '';
-        $this->course_id = '';
+        $this->category = '';
+        $this->photo_id = '';
     }
 
     public function store()
     {
         $dataValid = $this->validate([
-            'title' => 'required',
-            'order' => 'required',
-            'level' => 'required',
-            'max_height' => 'nullable',
-            'description' => 'required',
-            'color' => 'nullable',
+            'title' => 'nullable',
+            'description' => 'nullable',
             'image' => 'nullable',
+            'category' => 'nullable',
         ]);
 
         if ($dataValid['image']) {
@@ -72,9 +66,9 @@ class Courses extends Component
             $dataValid['image'] = null;
         }
 
-        Course::updateOrCreate(['id' => $this->course_id], $dataValid);
+        Photo::updateOrCreate(['id' => $this->photo_id], $dataValid);
 
-        session()->flash('alert', $this->course_id ? 'Course Updated Successfully.' : 'Course Created Successfully.');
+        session()->flash('alert', $this->photo_id ? 'Photo Updated Successfully.' : 'Photo Created Successfully.');
 
         $this->closeModal();
         $this->resetInputFields();
@@ -82,16 +76,13 @@ class Courses extends Component
 
     public function edit($id)
     {
-        $course = Course::findOrFail($id);
+        $photo = Photo::findOrFail($id);
 
-        $this->course_id = $id;
-        $this->title = $course->title;
-        $this->order = $course->order;
-        $this->description = $course->description;
-        $this->image = $course->image;
-        $this->color = $course->color;
-        $this->level = $course->level;
-        $this->max_height = $course->max_height;
+        $this->photo_id = $id;
+        $this->title = $photo->title;
+        $this->description = $photo->description;
+        $this->image = $photo->image;
+        $this->category = $photo->category;
 
         $this->openModal();
     }
@@ -103,9 +94,9 @@ class Courses extends Component
 
     public function delete($id)
     {
-        $course = Course::find($id)->delete();
+        $photo = Photo::find($id)->delete();
 
-        session()->flash('message', 'Course Deleted Successfully.');
+        session()->flash('message', 'Photo Deleted Successfully.');
     }
 
     private function store_image($image)
@@ -116,7 +107,7 @@ class Courses extends Component
         /**
          * Si c'est la catégorie n'éxiste pas
          */
-        if ($this->course_id == "") {
+        if ($this->photo_id == "") {
             $new = true;
             /**
              * On check si une image a été uploadée
@@ -132,9 +123,9 @@ class Courses extends Component
             /**
              * Si n'y a pas d'image déjà enregistrée
              */
-            $current_course = Course::find($this->course_id);
+            $current_photo = Photo::find($this->photo_id);
 
-            if ($current_course->image == null) {
+            if ($current_photo->image == null) {
                 if ($image != "") {
                     $store = true;
                 }
@@ -146,10 +137,10 @@ class Courses extends Component
                 /**
                  * Si on veut changer l'image déjà présente
                  */
-                if ($current_course->image != $image) {
+                if ($current_photo->image != $image) {
                     if ($image != "") {
-                        if(File::exists('storage/'.$current_course->image)) {
-                            File::delete('storage/'.$current_course->image);
+                        if(File::exists('storage/'.$current_photo->image)) {
+                            File::delete('storage/'.$current_photo->image);
                         }
 
                         $store = true;
@@ -162,7 +153,7 @@ class Courses extends Component
             return $this->image->store('images', 'public');
         } else {
             if (!$new) {
-                return $current_course->image;
+                return $current_photo->image;
             } else {
                 return null;
             }
