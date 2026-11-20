@@ -26,9 +26,10 @@ class ContactController extends Controller
                 'institution' => $request->get('institution'),
             ],
             function ($message) use ($request) {
-                $message->from(env("MAIL_FROM_ADDRESS"));
+                // config() et non env() : env() renvoie null une fois la configuration mise en cache
+                $message->from(config('mail.from.address'));
                 $message->subject($request->subject);
-                $message->to(env("MAIL_TO_ADDRESS"));
+                $message->to(config('mail.to.address'));
             }
         );
 

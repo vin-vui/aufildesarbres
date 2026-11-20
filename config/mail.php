@@ -92,6 +92,11 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
+    // Destinataire des messages du formulaire de contact
+    'to' => [
+        'address' => env('MAIL_TO_ADDRESS'),
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Markdown Mail Settings
