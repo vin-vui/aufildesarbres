@@ -37,7 +37,6 @@
     {{-- Livewire 3 embarque Alpine 3 : il remplace l'Alpine 2 qui était chargé par app.js --}}
     @livewireStyles
 
-    <script defer data-domain="parcaventure-malbuisson.fr" src="https://plausible.io/js/plausible.js"></script>
 
 </head>
 <body>

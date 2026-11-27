@@ -18,7 +18,8 @@
         "mailjet/laravel-mailjet": "^3.0",
         "spatie/laravel-honeypot": "^4.3",
         "symfony/http-client": "^7.0",
-        "symfony/mailer": "^7.0"
+        "symfony/mailer": "^7.0",
+        "vin-vui/laravel-stats": "^0.1"
     },
     "require-dev": {
         "spatie/laravel-ignition": "^2.9",
@@ -63,5 +64,10 @@
         "sort-packages": true
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [{
+        "name": "laravel-stats",
+        "type": "vcs",
+        "url": "https://github.com/vin-vui/laravel-stats"
+    }]
 }

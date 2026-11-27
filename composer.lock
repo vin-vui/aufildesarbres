@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a987630db95fbef8389fe2183c4282e2",
+    "content-hash": "73b3fb1587d10f9b5cd28ea2429f52e8",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -8371,6 +8371,49 @@
             },
             "time": "2025-12-02T11:56:42+00:00",
             "published-time": "2025-12-11T21:29:16+00:00"
+        },
+        {
+            "name": "vin-vui/laravel-stats",
+            "version": "v0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vin-vui/laravel-stats.git",
+                "reference": "c396c80e5ff1f5e1d078d0448fd5def68395090b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vin-vui/laravel-stats/zipball/c396c80e5ff1f5e1d078d0448fd5def68395090b",
+                "reference": "c396c80e5ff1f5e1d078d0448fd5def68395090b",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^11.0|^12.0|^13.0",
+                "illuminate/database": "^11.0|^12.0|^13.0",
+                "illuminate/support": "^11.0|^12.0|^13.0",
+                "php": "^8.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "VinVui\\Stats\\StatsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "VinVui\\Stats\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Statistiques de visites maison pour les sites Laravel : sans cookie, tableau de bord dans l'admin.",
+            "support": {
+                "source": "https://github.com/vin-vui/laravel-stats/tree/v0.1.1",
+                "issues": "https://github.com/vin-vui/laravel-stats/issues"
+            },
+            "time": "2026-11-27T13:56:59+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
