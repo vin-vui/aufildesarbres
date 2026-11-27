@@ -92,8 +92,9 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
-    // Destinataire des messages du formulaire de contact
-    'to' => [
+    // Destinataire des messages du formulaire de contact.
+    // Ne pas nommer cette clé 'to' : Laravel redirigerait alors TOUS les e-mails du site vers cette adresse.
+    'contact_to' => [
         'address' => env('MAIL_TO_ADDRESS'),
     ],
 

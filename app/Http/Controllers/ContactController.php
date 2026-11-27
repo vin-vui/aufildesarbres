@@ -29,7 +29,7 @@ class ContactController extends Controller
                 // config() et non env() : env() renvoie null une fois la configuration mise en cache
                 $message->from(config('mail.from.address'));
                 $message->subject($request->subject);
-                $message->to(config('mail.to.address'));
+                $message->to(config('mail.contact_to.address'));
             }
         );
 
