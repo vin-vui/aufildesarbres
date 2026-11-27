@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "73b3fb1587d10f9b5cd28ea2429f52e8",
+    "content-hash": "65194d36d30f88564ff1707339904d96",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -8374,16 +8374,16 @@
         },
         {
             "name": "vin-vui/laravel-stats",
-            "version": "v0.1.2",
+            "version": "v0.1.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/vin-vui/laravel-stats.git",
-                "reference": "30dfa6fc0aa590932dedb3540d08bb847a7d2890"
+                "url": "https://github.com/vin-vui/laravel-stats",
+                "reference": "7dde615f2c3e83506b905828f8ed2ed0ccfb3192"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vin-vui/laravel-stats/zipball/30dfa6fc0aa590932dedb3540d08bb847a7d2890",
-                "reference": "30dfa6fc0aa590932dedb3540d08bb847a7d2890",
+                "url": "https://api.github.com/repos/vin-vui/laravel-stats/zipball/7dde615f2c3e83506b905828f8ed2ed0ccfb3192",
+                "reference": "7dde615f2c3e83506b905828f8ed2ed0ccfb3192",
                 "shasum": ""
             },
             "require": {
@@ -8409,11 +8409,7 @@
                 "MIT"
             ],
             "description": "Statistiques de visites maison pour les sites Laravel : sans cookie, tableau de bord dans l'admin.",
-            "support": {
-                "source": "https://github.com/vin-vui/laravel-stats/tree/v0.1.2",
-                "issues": "https://github.com/vin-vui/laravel-stats/issues"
-            },
-            "time": "2026-11-27T14:20:50+00:00"
+            "time": "2026-11-27T15:30:29+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
