@@ -8374,16 +8374,16 @@
         },
         {
             "name": "vin-vui/laravel-stats",
-            "version": "v0.1.1",
+            "version": "v0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vin-vui/laravel-stats.git",
-                "reference": "c396c80e5ff1f5e1d078d0448fd5def68395090b"
+                "reference": "30dfa6fc0aa590932dedb3540d08bb847a7d2890"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vin-vui/laravel-stats/zipball/c396c80e5ff1f5e1d078d0448fd5def68395090b",
-                "reference": "c396c80e5ff1f5e1d078d0448fd5def68395090b",
+                "url": "https://api.github.com/repos/vin-vui/laravel-stats/zipball/30dfa6fc0aa590932dedb3540d08bb847a7d2890",
+                "reference": "30dfa6fc0aa590932dedb3540d08bb847a7d2890",
                 "shasum": ""
             },
             "require": {
@@ -8410,10 +8410,10 @@
             ],
             "description": "Statistiques de visites maison pour les sites Laravel : sans cookie, tableau de bord dans l'admin.",
             "support": {
-                "source": "https://github.com/vin-vui/laravel-stats/tree/v0.1.1",
+                "source": "https://github.com/vin-vui/laravel-stats/tree/v0.1.2",
                 "issues": "https://github.com/vin-vui/laravel-stats/issues"
             },
-            "time": "2026-11-27T13:56:59+00:00"
+            "time": "2026-11-27T14:20:50+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

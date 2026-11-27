@@ -17,5 +17,5 @@ return [
     'keep_raw_days' => 2,
 
     // Couleur principale du tableau de bord. Dans le .env, mettre la valeur entre guillemets : STATS_ACCENT="#059669" (sinon # démarre un commentaire).
-    'accent' => env('STATS_ACCENT', '#059669'), // vert des boutons de l'admin
+    'accent' => env('STATS_ACCENT', '#D4D829'), // vert de la charte du site (green-th)
 ];
